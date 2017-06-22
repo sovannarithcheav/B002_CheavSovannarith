@@ -1,0 +1,40 @@
+
+ <!--sidebar start-->
+      <aside>
+          <div id="sidebar"  class="nav-collapse ">
+              <!-- sidebar menu start-->
+              <ul class="sidebar-menu">                
+                  <li class="active">
+                      <a class="" th:href="@{/admin/dashboard}">
+                          <i class="icon_house_alt"></i>
+                          <span th:text="#{dashboard}"></span>
+                      </a>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i class="icon_document_alt"></i>
+                          <span th:text="#{Registers}"></span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a class="" th:href="@{/admin/user-cu}" th:text="#{userregister}"></a></li>                          
+                          <li><a class="" th:href="@{/admin/role-cu}" th:text="#{roleregister}"></a></li>
+                      </ul>
+                  </li>
+                  
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i class="icon_document_alt"></i>
+                          <span​ th:text="#{list}"></span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a class="" th:href="@{/admin/user-list}">User List</a></li>                          
+                          <li><a class="" th:href="@{/admin/role-list}">Role List</a></li>
+                      </ul>
+                  </li>       
+              </ul>
+              <!-- sidebar menu end-->
+          </div>
+      </aside>
+      <!--sidebar end-->
