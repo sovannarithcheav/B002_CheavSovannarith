@@ -18,8 +18,7 @@
 					<h3 class="page-header" th:text="#{Registers}"><i class="fa fa-files-o"></i> </h3>
 					<ol class="breadcrumb">
 						<li><i class="fa fa-home"></i><a href="index.html" th:text="#{home}"></a></li>
-						<li  th:text="#{Registers}" ><i class="icon_document_alt"></i></li>
-						<li><i class="fa fa-files-o"><span th:text="#{userregister}"></span></i></li>
+						<li><i class="fa fa-files-o"><span th:text="#{detail}"></span></i></li>
 					</ol>
 				</div>
 			</div>
@@ -27,34 +26,34 @@
               <div class="row">
                   <div class="col-lg-12">
                       <section class="panel">
-                          <header class="panel-heading" th:text="#{register}">
+                          <header class="panel-heading" th:text="#{detail}">
                           </header>
                           <div class="panel-body">
                               <div class="form">
              <!-- FORM Header -->
-                                  <form class="form-validate form-horizontal " id="register_form" th:action="@{/save}" th:method="post" th:object="${USER}">
+                                  <form class="form-validate form-horizontal " id="register_form" th:object="${USER}">
                                       <div class="form-group ">
                                           <label for="fullname" class="control-label col-lg-2"​ th:text="#{username}"> <span class="required">*</span></label>
                                           <div class="col-lg-10">
-                                              <input class=" form-control" id="fullname" name="fullname" type="text" th:field="*{username}" />
+                                              <input disabled class=" form-control" id="fullname" name="fullname" type="text" th:field="*{username}" />
                                           </div>
                                       </div>
                                       <div class="form-group ">
                                           <label for="address" class="control-label col-lg-2" th:text="#{password}"> <span class="required">*</span></label>
                                           <div class="col-lg-10">
-                                              <input class=" form-control" id="address" name="address" type="text" th:field="*{password}" />
+                                              <input disabled class=" form-control" id="address" name="address" type="text" th:field="*{password}" />
                                           </div>
                                       </div>
                                       <div class="form-group ">
                                           <label for="username" class="control-label col-lg-2" th:text="#{email}"> <span class="required">*</span></label>
                                           <div class="col-lg-10">
-                                              <input class="form-control " id="username" name="email" type="text" th:field="*{email}"/>
+                                              <input disabled class="form-control " id="username" name="email" type="text" th:field="*{email}"/>
                                           </div>
                                       </div>
                                       <div class="form-group ">
                                           <label for="password" class="control-label col-lg-2" th:text="#{gender}"> <span class="required">*</span></label>
                                           <div class="col-lg-10">
-											<select class="form-control " th:field="*{gender}">
+											<select disabled class="form-control " th:field="*{gender}">
 												<option value="M" th:text="#{male}"></option>
 												<option value="F" th:text="#{female}"></option>
 											</select>
@@ -63,13 +62,19 @@
                                       <div class="form-group ">
                                           <label for="username" class="control-label col-lg-2" th:text="#{userhash}"> <span class="required">*</span></label>
                                           <div class="col-lg-10">
-                                              <input th:value="*{getUserHash()}" class="form-control " id="userHash" name="userHash" type="text"  th:field="*{userHash}"/>
+                                              <input disabled class="form-control " id="userHash" name="userHash" type="text"  th:field="*{userHash}"/>
                                           </div>
                                       </div>
-                                      <div class="form-group">
-                                          <div class="col-lg-offset-2 col-lg-10">
-                                              <button class="btn btn-primary" type="submit" th:text="#{save}"></button>
-                                              <button class="btn btn-default" type="button" th:text="#{cancel}"></button>
+                                      <div class="form-group ">
+                                          <label for="username" class="control-label col-lg-2" th:text="#{userhash}"> <span class="required">*</span></label>
+                                          <div class="col-lg-10">
+                                              <input disabled class="form-control " id="userHash" name="userHash" type="text"  th:field="*{signUpWith.id}"/>
+                                          </div>
+                                      </div>
+                                      <div class="form-group ">
+                                          <label for="username" class="control-label col-lg-2" th:text="#{userhash}"> <span class="required">*</span></label>
+                                          <div class="col-lg-10">
+                                              <input disabled class="form-control " id="userHash" name="userHash" type="text"  th:field="*{signUpWith.deviceName}"/>
                                           </div>
                                       </div>
                                   </form>
